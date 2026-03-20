@@ -1,6 +1,3 @@
-FROM golang:latest
+FROM minio/minio:RELEASE.2025-09-07T16-13-09Z
 
-ARG MINIO_VERSION="RELEASE.2024-11-07T00-52-20Z"
-
-
-RUN go install github.com/minio/minio@${MINIO_VERSION}
+ENTRYPOINT ["minio"]
